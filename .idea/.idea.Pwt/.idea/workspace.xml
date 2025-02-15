@@ -13,97 +13,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b344ecc-7f68-4f09-a9dd-f2c926d48423" name="Changes" comment="Initial implementation of Repo">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pwt/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pwt/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pwt/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pwt/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pwt/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pwt/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/API.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store.Client/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store.Client/Pages/Counter.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store.Client/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store.Client/Store.Client.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store.Client/_Imports.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store.Client/wwwroot/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store.Client/wwwroot/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/App.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/Layout/MainLayout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/Layout/MainLayout.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/Layout/NavMenu.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/Layout/NavMenu.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/Pages/Error.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/Pages/Home.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/Pages/Weather.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/Routes.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Components/_Imports.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/Store.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Store/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pwt.sln" afterDir="false" />
+    <list default="true" id="9b344ecc-7f68-4f09-a9dd-f2c926d48423" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/API/Controllers/ProductController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Db/Repositories/PWT_Test_Repository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Db/UnitOfWork.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Interfaces/IGenericRepositoryInterface.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Interfaces/IUnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pwt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pwt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,6 +49,10 @@
     &quot;accountId&quot;: &quot;5e269bb6-b132-4ea9-b44a-868bf262a1bb&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5b8d0bce2fc640f989628bc48728e48a20ac20/7f/c94fc2b1/SingleQueryingEnumerable`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2565b9d99fdde488bc7801b84387b2cc864959cfb63212e1ff576fc9c6bb7e/CancellationToken.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -132,20 +65,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.API: https.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Store: http">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.API: https">
     <configuration name="Store" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -344,6 +279,12 @@
       <option name="presentableId" value="Default" />
       <updated>1739488601151</updated>
       <workItem from="1739488602780" duration="550000" />
+      <workItem from="1739489163149" duration="378000" />
+      <workItem from="1739611677239" duration="5384000" />
+      <workItem from="1739623266820" duration="98000" />
+      <workItem from="1739623374596" duration="222000" />
+      <workItem from="1739623608127" duration="135000" />
+      <workItem from="1739623861416" duration="11840000" />
     </task>
     <task id="LOCAL-00001" summary="Initial implementation of Repo">
       <option name="closed" value="true" />
@@ -353,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739489144628</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Included .idea folder to appease the mighty Rider gods">
+      <option name="closed" value="true" />
+      <created>1739489477115</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739489477115</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,9 +310,21 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial implementation of Repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial implementation of Repo" />
+    <MESSAGE value="Included .idea folder to appease the mighty Rider gods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Included .idea folder to appease the mighty Rider gods" />
   </component>
 </project>

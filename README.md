@@ -15,11 +15,20 @@ Process:
 - varer.SupplierNo -> beholdning.SupplierID
 - varer.EAN -> beholdning.ean -- have a relationship
 - ShopID: has no constraint, also not an identity. Uniqueness enforced code-side?
+- Lookup table: Beholdning has a relationship with varer.
 
 Backend:
-- Repository pattern
-- unit of work pattern
-- simulation af køb.
+TODO: 
+1. appsettings [x]
+2. connectionstring [x]
+3. EF db first [x]
+4. JWT
+5. TLS
+6. DTO's.
+
+- Repository pattern [x]
+- unit of work pattern [undecided]
+- simulation af køb. [out of scope?]
 - unit test
 - TLS
 - JWT
