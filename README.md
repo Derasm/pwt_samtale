@@ -26,8 +26,8 @@ TODO:
 5. TLS
 6. DTO's.
 
-- Repository pattern [x]
-- unit of work pattern [undecided]
+- Repository pattern [Unnecessary - EF handles]
+- unit of work pattern [Unnecessary - EF handles]
 - simulation af køb. [out of scope?]
 - unit test
 - TLS
@@ -38,8 +38,9 @@ Frontend:
 - TLS
 - JWT
 - Fremvisning af data i en overskuelig måde.
-- Cart.
-- Vurdér hvor meget der skal kunne søges på (Pris, Størrelse, Længde? (if any), Navn, sæson?)
 - Filter
 - Søgning
+- Cart.
+- Vurdér hvor meget der skal kunne søges på (Pris, Størrelse, Længde? (if any), Navn, sæson?)
+
 - Frontend test. 

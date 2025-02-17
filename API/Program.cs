@@ -1,4 +1,5 @@
 using API.Data;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,17 +8,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-// Register Generic Repository & Unit of Work
-builder.Services.AddScoped(typeof(IGenericRepositoryInterface<>), typeof(PWT_Test_Repository<>));
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+// Register services.
+builder.Services.AddScoped<IVareService, VareService>();
 // Add EF Core DbContext
 builder.Services.AddDbContextFactory<PwtDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PWT_Test_DB")));
-
+builder.Services.AddControllers();
 
 
 var app = builder.Build();
+
+app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -26,18 +27,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<PwtDbContext>();
-
-    var items = dbContext.Varer.Take(5).ToList();
-
-    foreach (var item in items)
-    {
-        Console.WriteLine($"StyleNo: {item.StyleNo}, Description: {item.ItemDescription}");
-    }
-}
 
 app.Run();
 
