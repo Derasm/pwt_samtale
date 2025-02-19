@@ -1,5 +1,6 @@
 using API.Db.Entities;
 using API.Interfaces;
+using Azure.Core;
 using Store.Shared.DTO;
 
 namespace API.Services;
@@ -20,39 +21,44 @@ public class VareDTOService : IVareDTOService
     /// Returns all Varer as FullVareDTO with quantities. 
     /// </summary>
     /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
     public async Task<IEnumerable<FullVareDTO>> GetAllFullWithStockAsync()
     {
         var products = await _vareService.GetAllAsync();
         var quantities = await _beholdningService.GetAllAsync();
         //Converting stock to dict for faster lookup as we dont need anything but ean and quant
         //key is ean, value is quant
-        var stockDict = quantities.ToDictionary(s => s.ean, s => s.InventoryQuantity);
-        //Now we knit them together
-        var results = products.Select(varer => new FullVareDTO
+        //There are duplicates in the Beholdning table, so we sum up the duplicates and add them in where they fit. 
+        var stockDict = quantities.GroupBy(s =>s.ean).
+            ToDictionary(g => g.Key, 
+                g => g.Sum(s => s.InventoryQuantity));
+        //we loop over products, for each product we call ToFUllVareDto, then we change the Quantity of the product to the matching one from dict. 
+        var result = products.Select(varer =>
         {
-            //Make a match with dict on ean, EAN if found else return 0
-            Quantity = stockDict.GetValueOrDefault(varer.EAN, 0),
+            var dto = ToFullVareDto(varer);
+            dto.Quantity = stockDict.GetValueOrDefault(varer.EAN, 0);
+            return dto;
         });
-
-        return results;
+        return result;
     }
 
     public async Task<IEnumerable<BasicVareDTO>> GetAllBasicWithStockAsync()
     {
         var products = await _vareService.GetAllAsync();
         var quantities = await _beholdningService.GetAllAsync();
-        //Converting stock to dict for faster lookup as we dont need anything but ean and quant
-        //key is ean, value is quant
-        var stockDict = quantities.ToDictionary(s => s.ean, s => s.InventoryQuantity);
-        //Now we knit them together
-        var results = products.Select(varer => new BasicVareDTO
+        
+        var stockDict = quantities.GroupBy(s =>s.ean).
+            ToDictionary(g => g.Key, 
+                g => g.Sum(s => s.InventoryQuantity));
+        
+        var result = products.Select(varer =>
         {
+            BasicVareDTO dto = ToBasicVareDto(varer);
             //Make a match with dict on ean, return as int if found else return 0
-            Quantity = stockDict.GetValueOrDefault(varer.EAN, 0),
-            ItemGroupName = varer.ItemGroupName
+            dto.Quantity = stockDict.GetValueOrDefault(varer.EAN, 0);
+            dto.ItemGroupName = varer.ItemGroupName;
+            return dto;
         });
-        return results;
+        return result;
     }
     
     public async Task<FullVareDTO?> GetFullWithStockAsync(string ean)

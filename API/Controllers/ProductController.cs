@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Store.Shared.DTO;
 
 namespace API.Controllers;
-[Authorize]
+// [Authorize]
 [ApiController]
 [Route("products")]
 public class ProductController : Controller

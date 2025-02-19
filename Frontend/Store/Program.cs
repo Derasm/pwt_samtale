@@ -1,4 +1,4 @@
-using Store.Client.Pages;
+using Blazored.SessionStorage;
 using Store.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7114/") });
+// builder.Services.AddScoped<IAuthService, AuthService>(); //JWT token
+// builder.Services.AddBlazoredSessionStorage();
 
 var app = builder.Build();
 
