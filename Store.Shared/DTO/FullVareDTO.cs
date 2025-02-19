@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace API.Models.DTO;
+namespace Store.Shared.DTO;
 
-public class VareDTO
+public class FullVareDTO
 {
     public int? SupplierNo { get; set; }
 
@@ -11,14 +11,13 @@ public class VareDTO
     public string? ItemGroupName { get; set; }
 
     public string? StyleNo { get; set; }
-    [Required]
-    
+
     public string? ItemDescription { get; set; }
-    [Required]
-    [RegularExpression("^(2XS|XS|S|M|L|XL|2XL|3XL|4XL|5XL)$", 
-        ErrorMessage = "Invalid size. Allowed values: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL.")]
+
     public string? Size { get; set; }
 
+    [Required, RegularExpression("^(2XS|XS|S|M|L|XL|2XL|3XL|4XL|5XL)$",
+         ErrorMessage = "Invalid size. Allowed values: 2XS, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL.")]
     public string? Length { get; set; }
 
     public string? EAN { get; set; }
@@ -37,5 +36,6 @@ public class VareDTO
 
     public string? URL { get; set; }
 
-    public bool? egnevarer { get; set; } 
+    public int? Egnevarer { get; set; }
+    public int? Quantity { get; set; }
 }

@@ -1,14 +1,13 @@
 
-using API.Models.DTO;
+using API.Db.Entities;
 
-namespace API.Data;
+namespace API.Interfaces;
 
 public interface IVareService
 {
     Task<IEnumerable<Varer>> GetAllAsync();
-    Task<Varer> GetByEanAsync(string EAN);
-    Task<bool> Create(VareDTO entity);
+    Task<Varer?> GetByEanAsync(string EAN);
     Task<bool> Update(Varer entity);
-    Task<bool>Update(VareDTO dto);
     void Delete(Varer entity);
+    Task<bool> Create(Varer entity);
 }

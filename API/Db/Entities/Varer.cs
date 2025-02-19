@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace API.Data;
+﻿namespace API.Db.Entities;
 
 public partial class Varer
 {

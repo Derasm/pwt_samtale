@@ -1,4 +1,4 @@
-namespace API.Data;
+namespace API.Interfaces;
 
 public interface IGenericRepositoryInterface<T> where T : class
 {

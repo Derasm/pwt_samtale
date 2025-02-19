@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-
-namespace API.Data;
+﻿namespace API.Db.Entities;
 
 public partial class ProductData
 {
