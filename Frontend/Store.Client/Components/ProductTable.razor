@@ -1,8 +1,10 @@
+@using Store.Client.Services
 @using Store.Shared.DTO
 
-@inject HttpClient Http
+@* @inject HttpClient Http *@
+@inject IProductService ProductService
 <PageTitle>Products</PageTitle>
-@rendermode InteractiveWebAssembly
+@rendermode @(new InteractiveWebAssemblyRenderMode(false))
 @* Disables pre-rendering. *@
 
 
@@ -88,7 +90,9 @@ else
 }
 
 @code {
-    private List<BasicVareDTO>? products;
+
+    public List<BasicVareDTO> products;
+    
     private string apiUrl = "/products/basic";
     
     //Pagination
@@ -102,15 +106,22 @@ else
 
     // We skip over x amount of products on each pagination move. 
     // Separate computed property for paginated products
-    private IEnumerable<BasicVareDTO> PaginatedProducts =>
+    public IEnumerable<BasicVareDTO> PaginatedProducts =>
         FilteredProducts.Skip((currentPage - 1) * pageSize).Take(pageSize);
-
+    
     //Sorting
     private string? currentSortColumn;
     private bool isAscending = true;
     
     //Searching
     private string searchQuery = "";
+    public IEnumerable<BasicVareDTO> FilteredProducts =>
+        products?.Where(p =>
+            string.IsNullOrEmpty(searchQuery) ||
+            (p.ItemDescription?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ?? false) ||
+            (p.SuggestedRetailPrice?.ToString().Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ?? false) ||
+            (p.ItemGroupName?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ?? false))
+        ?? products!;
     // Resets page when searching
     private string SearchQuery
     {
@@ -126,7 +137,9 @@ else
     {
         try
         {
-            products = await Http.GetFromJsonAsync<List<BasicVareDTO>>(apiUrl);
+            // products = await Http.GetFromJsonAsync<List<BasicVareDTO>>(apiUrl);
+            products = await ProductService.GetAllBasicVare();
+
         }
         catch (Exception ex)
         {
@@ -149,13 +162,7 @@ else
         currentPage = 1; // Reset to first page when filtering
     }
 
-    private IEnumerable<BasicVareDTO> FilteredProducts =>
-        products?.Where(p =>
-                string.IsNullOrEmpty(searchQuery) ||
-                (p.ItemDescription?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                (p.SuggestedRetailPrice?.ToString().Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                (p.ItemGroupName?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ?? false))
-        ?? products!;
+    
 
     #endregion
     
@@ -178,11 +185,12 @@ else
         }
     }
     #endregion
+    
     #region Sort order
     private void SortTable(string columnName)
     {
         //Bail early option
-        if (products == null || !products.Any())
+        if (products.Any())
             return;
         if (currentSortColumn == columnName)
         {
@@ -195,7 +203,7 @@ else
         }
 
         // Perform sorting - we use the columnName passed in for the Reflective property.
-        if (products != null)
+        if (!products.Any())
         {
             products = isAscending
                 ? products.OrderBy(p => GetPropertyValue(p, columnName)).ToList()
