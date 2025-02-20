@@ -111,7 +111,7 @@ else
     
     //Sorting
     private string? currentSortColumn;
-    private bool isAscending = true;
+    private bool isAscending = false;
     
     //Searching
     private string searchQuery = "";
@@ -138,7 +138,8 @@ else
         try
         {
             // products = await Http.GetFromJsonAsync<List<BasicVareDTO>>(apiUrl);
-            products = await ProductService.GetAllBasicVare();
+            var result = await ProductService.GetAllBasicVare();
+            products = result.OrderByDescending(p => p.Quantity).ToList();
 
         }
         catch (Exception ex)
@@ -190,12 +191,16 @@ else
     private void SortTable(string columnName)
     {
         //Bail early option
-        if (products.Any())
+        if (!products.Any())
+        {
             return;
+        }
+
         if (currentSortColumn == columnName)
         {
             isAscending = !isAscending; // Toggle order
         }
+        
         else
         {
             currentSortColumn = columnName;
@@ -203,12 +208,10 @@ else
         }
 
         // Perform sorting - we use the columnName passed in for the Reflective property.
-        if (!products.Any())
-        {
-            products = isAscending
-                ? products.OrderBy(p => GetPropertyValue(p, columnName)).ToList()
-                : products.OrderByDescending(p => GetPropertyValue(p, columnName)).ToList();
-        }
+        products = isAscending
+            ? products.OrderBy(p => GetPropertyValue(p, columnName)).ToList()
+            : products.OrderByDescending(p => GetPropertyValue(p, columnName)).ToList();
+        StateHasChanged();
     }
     
     private object? GetPropertyValue(BasicVareDTO product, string propertyName)
