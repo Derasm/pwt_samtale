@@ -21,6 +21,17 @@ builder.Services.AddDbContextFactory<PwtDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PWT_Test_DB")));
 builder.Services.AddControllers();
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
 //JWT Authenticaton
 
 #region JWT Authentication
@@ -54,6 +65,7 @@ var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseCors();
 app.MapControllers();
 
 // Configure the HTTP request pipeline.

@@ -7,4 +7,5 @@ public class BasicVareDTO
     public decimal? SuggestedRetailPrice { get; set; }
     public int? Quantity { get; set; }
     public string? ItemGroupName { get; set; }
+    public string? Currency { get; set; }
 }

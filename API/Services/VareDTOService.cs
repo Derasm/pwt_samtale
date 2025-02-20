@@ -56,6 +56,7 @@ public class VareDTOService : IVareDTOService
             //Make a match with dict on ean, return as int if found else return 0
             dto.Quantity = stockDict.GetValueOrDefault(varer.EAN, 0);
             dto.ItemGroupName = varer.ItemGroupName;
+            dto.Currency = varer.CostPriceCurrency;
             return dto;
         });
         return result;

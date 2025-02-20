@@ -1,0 +1,34 @@
+.fixed-table {
+    table-layout: fixed; /* Prevents column width jumps */
+    width: 100%;
+}
+
+.fixed-table th,
+.fixed-table td {
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
+}
+
+.sort-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    color: white;
+}
+/*Small initially, grow on focus.*/
+.search-input {
+    width: 150px;
+    transition: width 0.3s ease-in-out;
+}
+@media(min-width: 768px) {
+    .search-input {
+        width: 30%;
+        transition: width 0.3s ease-in-out;
+    }
+    .search-input:focus {
+        width: 60%;
+    }
+}
